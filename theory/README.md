@@ -5,10 +5,12 @@
 Find regexes that match the following. (e.g. find a single regex that matches
 both `antelope` and `antelopes`.)
 
-* Regex that matches:
+* Regex that matches: 
 
     antelope
     antelopes
+
+MY ANSWER: /((antelope)+?)(\b|s\b)/g
 
 * Regex that matches:
 
@@ -18,6 +20,8 @@ both `antelope` and `antelopes`.)
   but not 
 
     boat
+MY ANSWER: /^(goat)|(moat)(?:(boat))*/g
+
 
 * Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   month and day can each be 1-2 digits). This does not need to verify the date
@@ -27,6 +31,13 @@ both `antelope` and `antelopes`.)
   1999-1-20
   1999-01-20
   812-2-10
+
+MY ANSWER:
+
+?\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])*/g
+
+// My feeling on this one is that it is incomplete. It doesn't recognize dates in valid formats. This is as far as I got today. I have had the hardest time with C and with regex, but I feel like SOME kind of understanding is finally penetrating through. I will revisit state machines this weekend for completion.
+
 
 ## State Machines
 
